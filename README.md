@@ -1,4 +1,4 @@
-# git のコンフリクトと解消の仕方のメモ
+p# git のコンフリクトと解消の仕方のメモ
 
 main ブランチを develop ブランチにマージする場合、つまり git switch develop ; git merge main する場合に、
 コンフリクトが発生することがあります。
@@ -18,11 +18,11 @@ main ブランチを develop ブランチにマージする場合、つまり gi
 
 これらのコンフリクトは以下のようにすることで、 2 のみの対応が可能なように変換できます。
 
-1. main のファイルを develop ブランチにコピーする
+1. case 1: main のファイルを develop ブランチにコピーする
     - `git restore --source=main case1.txt`
         - `git restore --source=conflict-main case1.txt` でも可
     - タグ resolve-conflict-case1 のコミット
-3. develop ブランチのファイルを編集して、 develop のみを採用すれば良いようにする
+3. case 3: develop ブランチのファイルを編集して、 develop のみを採用すれば良いようにする
     - タグ resolve-conflict-case3 のコミット
 
 その後は以下の手順でマージが可能です。
