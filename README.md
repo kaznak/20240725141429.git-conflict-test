@@ -1,4 +1,4 @@
-# git のコンフリクトと解消の仕方のメモ
+# git のコンフリクトを分担して解消するやり方のメモ
 
 main ブランチを develop ブランチにマージする場合、つまり git switch develop ; git merge main する場合に、
 コンフリクトが発生することがあります。
